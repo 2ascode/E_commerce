@@ -251,23 +251,23 @@ iphoneStock.initShoppingCartList();
 iphoneStock.initCount();
 
 const pathname = window.location.pathname;
-if (pathname == "/admin.html") {
+if (pathname == "/E_commerce/admin.html") {
   iphoneStock.addProduct();
   iphoneStock.displayCouunt();
 }
 
-if (pathname == "/shop.html") {
+if (pathname == "/E_commerce/shop.html") {
   iphoneStock.displayCouunt();
   iphoneStock.displayIos();
   iphoneStock.addToShoppingCartList();
 }
 
-if (pathname == "/index.html") {
+if (pathname == "/E_commerce/index.html") {
   iphoneStock.displayCouunt();
   iphoneStock.addToShoppingCartList();
 }
 
-if (pathname == "/shopping_cart.html") {
+if (pathname == "/E_commerce/shopping_cart.html") {
   iphoneStock.displayCouunt();
   iphoneStock.displayShoppingCartList();
   iphoneStock.initShoppingCartList()
