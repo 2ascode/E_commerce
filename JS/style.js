@@ -53,7 +53,7 @@ class IphoneStock {
               nom: name.value,
               couleur: color.value,
               prix: price.value,
-              imageURl: "/images/" + file.name,
+              imageURl: "images/" + file.name,
             };
             this.iphoneStock.push(ios);
             localStorage.setItem(
@@ -251,23 +251,23 @@ iphoneStock.initShoppingCartList();
 iphoneStock.initCount();
 
 const pathname = window.location.pathname;
-if (pathname == "/admin.html") {
+if (pathname == "admin.html") {
   iphoneStock.addProduct();
   iphoneStock.displayCouunt();
 }
 
-if (pathname == "/shop.html") {
+if (pathname == "shop.html") {
   iphoneStock.displayCouunt();
   iphoneStock.displayIos();
   iphoneStock.addToShoppingCartList();
 }
 
-if (pathname == "/index.html") {
+if (pathname == "index.html") {
   iphoneStock.displayCouunt();
   iphoneStock.addToShoppingCartList();
 }
 
-if (pathname == "/shopping_cart.html") {
+if (pathname == "shopping_cart.html") {
   iphoneStock.displayCouunt();
   iphoneStock.displayShoppingCartList();
   iphoneStock.initShoppingCartList()
