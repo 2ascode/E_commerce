@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="headerContent">
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/LogodePommeCity.png" alt="Logo de Pomme City"></a>
+                </div>
+                <h1 class="adminPageTitle">PAGE DE L'ADMINISTRATEUR</h1>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="adminPageContent">
+                <form class="addForm">
+                    <h2>Ajouter un produit</h2>
+                    <div class="formItem">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="formItem">
+                        <label for="color">Couleur</label>
+                        <input type="text" name="color">
+                    </div>
+                    <div class="formItem">
+                        <label for="price">Prix U.</label>
+                        <input type="number" name="price">
+                    </div>
+                    <div class="formItem">
+                        <label for="image">Sélectionnez une image</label>
+                        <input type="file" name="image" id="image" accept="image/*">
+                    </div>
+                    <div class="formBtn">
+                        <button type="submit">Valider</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="JS/style.js"></script>
+</body>
+
+</html>

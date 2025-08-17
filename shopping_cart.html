@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="headerContent">
+          <div class="logo">
+            <a href="/index.html"
+              ><img src="/images/LogodePommeCity.png" alt="Logo de Pomme City"
+            /></a>
+          </div>
+          <nav class="headerMenu">
+            <ul>
+              <li class="menuItem"><a href="/index.html">Accueil</a></li>
+              <li class="menuItem"><a href="/shop.html">Shop</a></li>
+              <li class="menuItem"><a href="#">A propos</a></li>
+              <li class="menuItem"><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="header_right">
+            <a href=""><img src="/images/shopping.png" alt="Shopping" /></a>
+          </div>
+          <div class="shopping"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="shoppingContent">
+          <h1>Produits Ajoutés</h1>
+        </div>
+        <table class="shoppingTable">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Couleur</th>
+              <th>Prix U.</th>
+              <th>Qte</th>
+              <th>Prix total</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody class="shoppingCartList"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="/JS/style.js"></script>
+    <script type="text/javascript">
+      FedaPay.init(".payBtn", {
+        public_key: "pk_sandbox_4zffNqbLoz57B-czeOMtylWV",
+      });
+    </script>
+  </body>
+</html>
