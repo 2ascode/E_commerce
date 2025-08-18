@@ -17,16 +17,16 @@ a {
   text-decoration: none;
 }
 
-input{
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
-    margin-top: 5px;
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
 }
 
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
 
 button,
@@ -47,12 +47,12 @@ button:hover,
   box-shadow: 0px 0px 15px 0px rgb(70, 115, 212);
 }
 
-.button{
+.button {
   background-color: silver !important;
   color: rgb(60, 59, 59) !important;
 }
 
-.button:hover{
+.button:hover {
   background-color: silver !important;
   color: rgb(60, 59, 59) !important;
   box-shadow: none !important;
@@ -109,6 +109,7 @@ img {
   background-color: rgb(55, 115, 227);
   width: 60px;
   height: 60px;
+  margin-right: 40px;
   overflow: hidden;
 }
 
@@ -125,7 +126,7 @@ img {
   font-size: 25px;
   color: #fff;
   top: 15px;
-  right: -25px;
+  right: 5px;
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -187,6 +188,11 @@ img {
   line-height: 150px;
 }
 
+.productContent,
+.featuredProductsContent {
+  padding: 20px 0;
+}
+
 .productBlock {
   width: 100%;
   display: grid;
@@ -244,93 +250,287 @@ img {
   margin-bottom: 20px;
 }
 
-
 /*Shopping*/
 
 .shoppingContent {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
-.shoppingContent h1{
-    font-size: 45px;
-    text-align: center;
+.shoppingContent h1 {
+  font-size: 45px;
+  text-align: center;
 }
 
-.shoppingTable{
-    width: 100%;
-    justify-content: space-between;
-    border-collapse: collapse;
+.shoppingTable {
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  border-collapse: collapse;
 }
 
-.shoppingTable th, td {
-    padding: 15px 10px;
-    text-align: left;
+.shoppingTable th,
+td {
+  padding: 15px 10px;
+  text-align: left;
 }
 
-.shoppingTable thead{
-    background-color: rgb(221, 216, 216);
+.shoppingTable thead {
+  background-color: rgb(221, 216, 216);
 }
 
-.shoppingTable tbody tr:nth-child(even){
-    background-color: rgb(144, 144, 194);
+.shoppingTable tbody tr:nth-child(even) {
+  background-color: rgb(144, 144, 194);
 }
 
-.action{
-    display: flex;
-    gap: 25px;
+.action {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.action .deletBtn{
-    background-color: rgb(234, 117, 117);
+.action .deletBtn {
+  background-color: rgb(234, 117, 117);
 }
 
-.action .payBtn{
-    background-color: rgb(112, 221, 115);
+.action .payBtn {
+  background-color: rgb(112, 221, 115);
 }
 
-.action .payBtn:hover, .deletBtn:hover{
-    background-color: white;
+.action .payBtn:hover,
+.deletBtn:hover {
+  background-color: white;
 }
-
 
 /*Admin Page*/
 
-.adminPageTitle{
-    font-size: 45px;
-    color: rgb(111, 111, 240);
+.adminPageTitle {
+  font-size: 45px;
+  color: rgb(111, 111, 240);
 }
 
-.adminPageContent{
-   
-    margin-top: 200px;
+.adminPageContent {
+  margin-top: 200px;
 }
 
-.addForm{
-    width: 500px;
-    margin: 0 auto;
-    background-color: rgb(116, 169, 215);
-    padding: 25px;
+.addForm {
+  width: 500px;
+  margin: 0 auto;
+  background-color: rgb(116, 169, 215);
+  padding: 25px;
+  border-radius: 10px;
 }
 
 .addForm h2 {
-    text-align: center;
-    font-size: 35px;
-    margin: 20px 0;
+  text-align: center;
+  font-size: 35px;
+  margin: 20px 0;
 }
 
-.formItem{
-    margin-bottom: 15px;
+.formItem {
+  margin-bottom: 15px;
 }
 
-.formBtn{
-    display: flex;
-    justify-content: center;
+.formBtn {
+  display: flex;
+  justify-content: center;
 }
 
-.emptydata{
+.emptydata {
   text-align: center;
   background-color: rgb(172, 110, 230);
   padding: 20px 0;
   font-size: 25px;
   font-weight: 600;
+}
+
+/*Responsivité*/
+@media (max-width: 1100px) {
+  .productBlock {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .productBlock {
+    max-width: 400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .headerContent h1 {
+    font-size: 35px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header_right {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .shopping {
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    font-size: 18px;
+  }
+
+  .bannerContent {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .bannerTitle,
+  .featuredProductsTitle {
+    font-size: 30px;
+  }
+  .bannerRight {
+    display: none;
+  }
+
+  .shopBtn a {
+    font-size: 16px;
+  }
+
+  .shoppingTable tr th,
+  td,
+  .action button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .shoppingTable .action button {
+    padding: 5px 10px;
+  }
+
+  .headerContent h1 {
+    font-size: 25px;
+  }
+  .addForm {
+    max-width: 300px;
+  }
+
+  .addForm h2 {
+    font-size: 20px;
+  }
+
+  .formItem label,
+  input {
+    font-size: 14px;
+  }
+
+  input {
+    height: 30px;
+  }
+
+  .formBtn button{
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .footerContent {
+    gap: 20px;
+  }
+
+  .footer .logo {
+    display: none;
+  }
+
+  .footerItem ul {
+    gap: 5px;
+  }
+
+  .footerItem ul li,
+  .footerItem ul strong {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerContent ul {
+    gap: 10px;
+  }
+
+  .headerContent ul li a {
+    font-size: 16px !important;
+  }
+  .headerContent h1 {
+    font-size: 20px;
+  }
+  .addForm {
+    max-width: 250px;
+  }
+  .productBlock {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .shoppingContent h1 {
+    font-size: 30px;
+  }
+  .shoppingTable tr th,
+  td,
+  .action button {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .shoppingTable .action button {
+    padding: 2px 5px;
+  }
+
+  .action {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  .headerContent ul {
+    gap: 5px;
+  }
+
+  .headerContent ul li a {
+    font-size: 13px !important;
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header_right {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .shopping {
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    font-size: 15px;
+  }
+
+  .headerContent h1 {
+    font-size: 17px;
+  }
+  .addForm {
+    max-width: 230px;
+  }
+  .shoppingContent h1 {
+    font-size: 25px;
+  }
+  .shoppingTable tr th,
+  td,
+  .action button {
+    padding: 4px;
+    font-size: 8px;
+  }
+
+  .shoppingTable .action button {
+    padding: 2px 5px;
+  }
 }
